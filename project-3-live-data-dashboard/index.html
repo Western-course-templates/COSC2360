@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live Data Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <header class="card-header">
+      <h1>Weather Dashboard</h1>
+      <p class="subtitle">COSC 2360 : Project 3</p>
+    </header>
+
+    <div class="card-body">
+      <!-- Search for a place. In Week 10 you handle this form and call the API. -->
+      <form id="search-form" class="search-form">
+        <input type="text" id="location-input" placeholder="Enter a city, for example Rock Springs" autocomplete="off" />
+        <button type="submit" class="btn">Search</button>
+      </form>
+
+      <!-- Loading indicator. Show this while a request is in flight (Week 11). -->
+      <div id="loading" class="loading" hidden>Loading...</div>
+
+      <!-- Error message. Show this if a city is not found or a request fails (Week 11). -->
+      <div id="error" class="error" hidden></div>
+
+      <!-- Results. Fill these in from your data (Week 9 with sample data, Week 10 with live data). -->
+      <section id="results" class="results" aria-label="Current weather">
+        <h2 id="location-name" class="location-name">Search for a place to begin</h2>
+        <div class="temperature" id="temperature"></div>
+        <div class="conditions" id="conditions"></div>
+      </section>
+    </div>
+  </main>
+
+  <!--
+    Week 12: to use jQuery, add this line just above the closing body tag,
+    before script.js:
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  -->
+  <script src="script.js"></script>
+</body>
+</html>
