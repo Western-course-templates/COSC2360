@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task Board</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <header class="card-header">
+      <h1>Task Board</h1>
+      <p class="subtitle">COSC 2360 : Project 2</p>
+    </header>
+
+    <div class="card-body">
+      <!-- Add a task. In Week 6 you handle this form's submit and validate the input. -->
+      <form id="task-form" class="task-form">
+        <input type="text" id="task-input" placeholder="Add a task and press Add" autocomplete="off" />
+        <button type="submit" class="btn">Add</button>
+      </form>
+
+      <!-- Validation and status messages go here -->
+      <p id="form-message" class="message" role="status"></p>
+
+      <!-- Search and sort. These come alive in Week 7. -->
+      <div class="tools">
+        <input type="text" id="search-input" class="search" placeholder="Search tasks" autocomplete="off" />
+        <select id="sort-select" class="sort">
+          <option value="newest">Newest first</option>
+          <option value="oldest">Oldest first</option>
+          <option value="az">A to Z</option>
+        </select>
+      </div>
+
+      <!-- Your tasks render here as list items. -->
+      <ul id="task-list" class="task-list">
+        <!-- Week 5: your code creates one list item per task -->
+      </ul>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
